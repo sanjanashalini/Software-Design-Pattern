@@ -24,7 +24,7 @@ const Home = () => {
 </div>
 <br></br>
 <br></br>
-<div className="flex justify-center bg-green-700 items-center h-20">
+<div className="flex justify-center bg-red-600 items-center h-30">
   <h1 className="font-semibold text-1xl sm:text-3xl md:text-4xl lg:text-6xl">WELCOME TO THE TOYS WORLD</h1>
 </div>
             <br></br>

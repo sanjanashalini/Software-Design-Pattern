@@ -1,13 +1,12 @@
 /* Container styling */
-body{
-    background-color: #b3ded1;
-}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
+   
 }
 
 /* Card styling */
@@ -28,10 +27,11 @@ body{
 .card-title {
     font-size: 1.5rem;
     margin-bottom: 8px;
+    color: #070101;
 }
 
 .card-description {
-    color: #666;
+    color: #0b0a0a;
 }
 
 /* Card content styling */
@@ -79,7 +79,7 @@ input {
 .button {
     width: 100%;
     padding: 12px;
-    background-color: #0e0c0d;
+    background-color: #e71126;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -90,4 +90,9 @@ input {
 
 .button:hover {
     background-color: #030b13;
+}
+.switchto{
+    margin-top: 16px;
+    color:black;
+    text-align: center;
 }

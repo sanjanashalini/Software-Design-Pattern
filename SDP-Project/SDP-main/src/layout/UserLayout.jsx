@@ -1,9 +1,12 @@
-import React from 'react'
 
-const UserLayout = () => {
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+const Userlayout = () => {
     return (
-        <div>UserLayout</div>
+        <div className='h-screen flex flex-col p-0 m-0'>
+          <Outlet />
+        </div>
     )
 }
 
-export default UserLayout
+export default Userlayout

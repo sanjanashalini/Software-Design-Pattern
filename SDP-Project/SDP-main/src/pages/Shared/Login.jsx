@@ -25,6 +25,9 @@ const Login = () => {
                 <div className='card-footer'>
                     <button className='button'>Login</button>
                 </div>
+                <div className="switchto">
+                    <button>Switch to admin</button>
+                </div>
             </div>
         </div>
     );

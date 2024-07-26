@@ -17,10 +17,7 @@ const Register = () => {
             <label htmlFor="name">Name</label>
             <input id="name" type="text" />
           </div>
-          <div className='input-group'>
-            <label htmlFor="roll">Rollnumber</label>
-            <input id="roll" type="text" />
-          </div>
+          
           <div className='input-group'>
             <label htmlFor="email">Email</label>
             <input id="email" type="email" placeholder="user@iamneo.ai" />
