@@ -16,6 +16,10 @@ import "./Style/Register.css"
 import "./Style/Footer.css"
 import ShopByCategory from './pages/User/UserLanding'
 import UserHome from './pages/User/UserHome'
+import GirlsProduct from './pages/User/GirlsProduct'
+import KidssProduct from './pages/User/KidsProduct'
+import Admin from './pages/Shared/Admin'
+
 
 const App = () => {
     return (
@@ -31,6 +35,10 @@ const App = () => {
                     <Route element={<Userlayout />}>
                         <Route path='/shopbycategory' element={<ShopByCategory />} />
                         <Route path='/toyproduct' element={<ToyProduct/>} />
+                        <Route path='/girls-product' element={<GirlsProduct/>} />
+                        <Route path='/kidsproduct' element={<KidssProduct/>} />
+                        <Route path='/adminpage' element={<Admin/>} />
+                        
                         <Route path='/userhome' element={<UserHome />} />
                     </Route>
 

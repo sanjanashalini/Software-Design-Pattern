@@ -2,158 +2,158 @@ import React, { useState } from "react";
 import "./UserProduct.css"// Ensure you have the styles defined
 import { useNavigate } from "react-router-dom";
 
-const ToyProduct = () => {
+const KidssProduct = () => {
   // Unique data for products
   const products = [
     {
       id: 1,
-      name: "Frank SpiderMan",
-      description: "Floor Puzzles",
+      name: "Crane Baby Zebra",
+      description: "Doll",
       size: "Small",
-      color: "Multicolor",
-     
-      price: 404,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491892917/300/491892917-1.jpeg",
+      color: "white",
+      Age:"1 yr",
+      price: 1004,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492412432/300/492412432-1_4733.jpeg",
     },
     {
       id: 2,
-      name: "Marvel Spiderman",
-      description: "School bag",
+      name: "Dashing Dino",
+      description: "Doll",
       size: "Large",
-      color: "red",
-      
+      color: "Blue",
+      Age:"1 yr",
       price: 649,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491636054/300/491636054-1.webp",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492409348/300/492409348-1.webp",
     },
     {
       id: 3,
-      name: "Marvel-Spiderman",
-      description: "Versel Scarlet Toy",
+      name: "Hippo Toy",
+      description: "Toys",
       size: "Medium",
-      color: "Red",
-     
-      price: 2000,
-      image: "https://hmadmin.hamleys.in/product/493175374/300/493175374-1.jpg",
+      color: "MultiColor",
+      Age:"2 yr",
+      price: 900,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492362695/300/492362695.webp",
     },
     {
       id: 4,
-      name: "Spiderman",
-      description: "Stationery Set Kit",
-      size: "Multicolor",
-      color: "Blue",
-     
-      price: 2500,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491667741/300/491667741-1.jpeg",
+      name: "Giraffe",
+      description: "Toy",
+      size: "Medium",
+      color: "Multicolor",
+      Age:"1 yr",
+      price: 780,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492362687/300/492362687.webp",
     },
     {
       id: 5,
-      name: "Marvel Spider man",
-      description: "Vercel Toy",
+      name: "Polar Animal",
+      description: "Puzzel",
       size: "Large",
-      color: "Orange",
-    
-      price: 1500,
-      image: "https://hmadmin.hamleys.in/product/493175372/300/493175372-1.jpg",
+      color: "Blue",
+      Age:"3 yr",
+      price: 500,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/490086638/300/490086638-1.jpeg",
     },
     {
       id: 6,
-      name: "Paw Patrol Toy",
-      description: "Accessories",
-      size: "30.48cm",
-      color: "Orange",
-    
+      name: "Dino Park",
+      description: "Wooden Puzzel",
+      size: "small",
+      color: "Multicolor",
+      Age:"3 yr",
       price: 1090,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491489668/300/491489668-1.webp",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492337280/300/492337280.webp",
     },
     {
       id: 7,
-      name: "Paw Patrol",
-      description: "First Puzzel",
+      name: "Popit Heart",
+      description: "Toy",
       size: "medium",
       color: "multicolor",
-    
+      Age:"3 yr",
       price: 150,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491960175/300/491960175-1.webp",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492408281/300/492408281-1.jpeg",
     },
     {
-      id: 6,
-      name: "Paw Patrol",
-      description: "Movie vehicle",
+      id: 8,
+      name: "Diicii Knock",
+      description: "Board Games",
       size: "Large",
       color: "Blue",
-    
-      price: 2500,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492910614/300/492910614_8515.jpeg",
+      Age:"5 yr",
+      price: 500,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491902263/300/491902263-1.webp",
     },
     {
       id: 9,
-      name: "Marvel Avengers",
-      description: "Vercel Toy",
+      name: "Nerf Elite",
+      description: "Nerf Darts",
       size: "Large",
       color: "Blue",
-    
-      price: 1800,
-      image: "https://hmadmin.hamleys.in/product/493175295/300/493175295-1.jpg",
+      Age:"8 yr",
+      price: 2700,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491902646/300/491902646-1_6262.webp",
     },
     {
       id: 10,
-      name: "Frank Avengers",
-      description: "Vercel Toy",
+      name: "Ralleyz Skeater",
+      description: "Storm Car",
       size: "Large",
-      color: "Blue",
-    
-      price: 475,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491602334/300/491602334-1.webp",
+      color: "Multicolor",
+      Age:"8 yr",
+      price: 2475,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492408131/300/492408131-1.jpeg",
     },
     {
       id: 11,
-      name: "Hasbro Avengers",
-      description: "Vercel Toy",
+      name:"Disney Princess",
+      description: "School Bag",
       size: "Large",
-      color: "Blue",
-    
-      price: 3324,
-      image: "https://hmadmin.hamleys.in/product/493175310/300/493175310-1.jpg",
+      color: "Red",
+      Age:"8 yr",
+      price: 699,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491635827/300/491635827-1.webp",
     },
     {
       id: 12,
-      name: "Lego Harry Potter",
-      description: "Building Toy set",
+      name: "SpeedUp",
+      description: "Basket Ball",
       size: "Large",
       color: "Blue",
-    
+      Age:"8 yr",
       price: 2324,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493176625/300/493176625-1.jpeg",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492363287/300/492363287-1.jpeg",
     },
     {
       id: 13,
-      name: "Lego Harry Potter",
-      description: "Building Toy set",
+      name: "Hasbro Toy",
+      description: "Toy Kit",
       size: "Large",
       color: "Blue",
-    
-      price: 5324,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493176621/300/493176621-1.jpeg",
+      Age:"12 yr",
+      price: 1524,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491948147/300/491948147-1.webp",
     },
     {
       id: 14,
-      name: "Li'l Wizards Baby Shark",
-      description: "Toy set",
+      name: "EMotorad ",
+      description: "Kick Scooter",
       size: "Large",
-      color: "Blue",
-    
-      price: 1067,
-      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/494347989/300/494347989-1_9011.webp",
+      color: "Red",
+      Age:"12 yr",
+      price: 10067,
+      image: "https://hmadmin.hamleys.in/product/493175425/300/LilE%20product%20DP.jpg",
     },
     {
       id: 15,
-      name: "Baby Shark",
-      description: "Sound Toy",
+      name: "Smiggle Mickey mouse",
+      description: "School Bag",
       size: "Large",
       color: "Blue",
-    
+      Age:"9 yr",
       price: 909,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491960527/300/491960527-1.webp",
+      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493174484/300/493174484-1_3588.webp",
     },
     // Add more toy products as needed
   ];
@@ -274,6 +274,7 @@ const ToyProduct = () => {
               <p>Size: {product.size}</p>
               <p>Color: {product.color}</p>
               <p>Shape: {product.shape}</p>
+              <p>Age: {product.Age}</p>
               <p>₹{product.price}</p>
               <p>Inclusive of all taxes</p>
             </div>
@@ -284,4 +285,4 @@ const ToyProduct = () => {
   );
 };
 
-export default ToyProduct;
+export default KidssProduct;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./UserProduct.css"// Ensure you have the styles defined
 import { useNavigate } from "react-router-dom";
 
-const ToyProduct = () => {
+const Shark = () => {
   // Unique data for products
   const products = [
     {
@@ -54,106 +54,6 @@ const ToyProduct = () => {
     
       price: 1500,
       image: "https://hmadmin.hamleys.in/product/493175372/300/493175372-1.jpg",
-    },
-    {
-      id: 6,
-      name: "Paw Patrol Toy",
-      description: "Accessories",
-      size: "30.48cm",
-      color: "Orange",
-    
-      price: 1090,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491489668/300/491489668-1.webp",
-    },
-    {
-      id: 7,
-      name: "Paw Patrol",
-      description: "First Puzzel",
-      size: "medium",
-      color: "multicolor",
-    
-      price: 150,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491960175/300/491960175-1.webp",
-    },
-    {
-      id: 6,
-      name: "Paw Patrol",
-      description: "Movie vehicle",
-      size: "Large",
-      color: "Blue",
-    
-      price: 2500,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492910614/300/492910614_8515.jpeg",
-    },
-    {
-      id: 9,
-      name: "Marvel Avengers",
-      description: "Vercel Toy",
-      size: "Large",
-      color: "Blue",
-    
-      price: 1800,
-      image: "https://hmadmin.hamleys.in/product/493175295/300/493175295-1.jpg",
-    },
-    {
-      id: 10,
-      name: "Frank Avengers",
-      description: "Vercel Toy",
-      size: "Large",
-      color: "Blue",
-    
-      price: 475,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491602334/300/491602334-1.webp",
-    },
-    {
-      id: 11,
-      name: "Hasbro Avengers",
-      description: "Vercel Toy",
-      size: "Large",
-      color: "Blue",
-    
-      price: 3324,
-      image: "https://hmadmin.hamleys.in/product/493175310/300/493175310-1.jpg",
-    },
-    {
-      id: 12,
-      name: "Lego Harry Potter",
-      description: "Building Toy set",
-      size: "Large",
-      color: "Blue",
-    
-      price: 2324,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493176625/300/493176625-1.jpeg",
-    },
-    {
-      id: 13,
-      name: "Lego Harry Potter",
-      description: "Building Toy set",
-      size: "Large",
-      color: "Blue",
-    
-      price: 5324,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493176621/300/493176621-1.jpeg",
-    },
-    {
-      id: 14,
-      name: "Li'l Wizards Baby Shark",
-      description: "Toy set",
-      size: "Large",
-      color: "Blue",
-    
-      price: 1067,
-      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/494347989/300/494347989-1_9011.webp",
-    },
-    {
-      id: 15,
-      name: "Baby Shark",
-      description: "Sound Toy",
-      size: "Large",
-      color: "Blue",
-    
-      price: 909,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491960527/300/491960527-1.webp",
     },
     // Add more toy products as needed
   ];
@@ -247,7 +147,7 @@ const ToyProduct = () => {
       <main className="products">
         <div className="product-header">
           <h2>Toys</h2>
-         
+          <button className="toggle-fit">Enable My Fit</button>
         </div>
         <div className="product-grid">
           {filteredProducts.map((product) => (
@@ -284,4 +184,4 @@ const ToyProduct = () => {
   );
 };
 
-export default ToyProduct;
+export default Shark;

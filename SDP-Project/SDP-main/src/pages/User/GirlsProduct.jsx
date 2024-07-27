@@ -2,118 +2,118 @@ import React, { useState } from "react";
 import "./UserProduct.css"// Ensure you have the styles defined
 import { useNavigate } from "react-router-dom";
 
-const ToyProduct = () => {
+const GirlsProduct = () => {
   // Unique data for products
   const products = [
     {
       id: 1,
-      name: "Frank SpiderMan",
-      description: "Floor Puzzles",
+      name: "Barbie",
+      description: "Toy Kit",
       size: "Small",
-      color: "Multicolor",
+      color: "Pink",
      
-      price: 404,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491892917/300/491892917-1.jpeg",
+      price: 2404,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/490803852/300/490803852-4.webp",
     },
     {
       id: 2,
-      name: "Marvel Spiderman",
-      description: "School bag",
+      name: "Barbie",
+      description: "Vercel bag",
       size: "Large",
-      color: "red",
+      color: "pink",
       
       price: 649,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491636054/300/491636054-1.webp",
+      image: "https://hmadmin.hamleys.in/product/493663103/300/493663103-1.jpg",
     },
     {
       id: 3,
-      name: "Marvel-Spiderman",
-      description: "Versel Scarlet Toy",
+      name: "Barbie",
+      description: "Versel Toy",
       size: "Medium",
-      color: "Red",
+      color: "pink",
      
-      price: 2000,
-      image: "https://hmadmin.hamleys.in/product/493175374/300/493175374-1.jpg",
+      price: 900,
+      image: "https://hmadmin.hamleys.in/product/493663407/300/493663407-1.jpg",
     },
     {
       id: 4,
-      name: "Spiderman",
-      description: "Stationery Set Kit",
-      size: "Multicolor",
-      color: "Blue",
+      name: "Barbie",
+      description: "Toy Kit",
+      size: "Medium",
+      color: "pink",
      
-      price: 2500,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491667741/300/491667741-1.jpeg",
+      price: 3780,
+      image: "https://hmadmin.hamleys.in/product/491232286/300/491636216-2.jpg",
     },
     {
       id: 5,
-      name: "Marvel Spider man",
+      name: "Barbie",
       description: "Vercel Toy",
       size: "Large",
-      color: "Orange",
+      color: "Pink",
     
       price: 1500,
-      image: "https://hmadmin.hamleys.in/product/493175372/300/493175372-1.jpg",
+      image: "https://hmadmin.hamleys.in/product/493663112/300/493663112-1.jpg",
     },
     {
       id: 6,
-      name: "Paw Patrol Toy",
-      description: "Accessories",
-      size: "30.48cm",
-      color: "Orange",
+      name: "Barbie",
+      description: "Mermaid Doll",
+      size: "small",
+      color: "Multicolor",
     
       price: 1090,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491489668/300/491489668-1.webp",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493663108/300/493663108-1_8086.webp",
     },
     {
       id: 7,
-      name: "Paw Patrol",
-      description: "First Puzzel",
+      name: "Frozen",
+      description: "School Bag",
       size: "medium",
       color: "multicolor",
     
-      price: 150,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491960175/300/491960175-1.webp",
+      price: 850,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491636005/300/491636005-1.webp",
     },
     {
-      id: 6,
-      name: "Paw Patrol",
-      description: "Movie vehicle",
+      id: 8,
+      name: "Frozen",
+      description: "Puzzel Pack",
       size: "Large",
       color: "Blue",
     
       price: 2500,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492910614/300/492910614_8515.jpeg",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491396008/300/491396008-1.webp",
     },
     {
       id: 9,
-      name: "Marvel Avengers",
-      description: "Vercel Toy",
+      name: "Frozen",
+      description: "Ice Palace Kit",
       size: "Large",
       color: "Blue",
     
       price: 1800,
-      image: "https://hmadmin.hamleys.in/product/493175295/300/493175295-1.jpg",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492409677/300/492409677-1_7654.jpeg",
     },
     {
       id: 10,
-      name: "Frank Avengers",
-      description: "Vercel Toy",
+      name: "Disney Princess",
+      description: "Horse Carriage kit",
       size: "Large",
-      color: "Blue",
+      color: "Multicolor",
     
-      price: 475,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491602334/300/491602334-1.webp",
+      price: 2475,
+      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/494348193/300/494348193-1_3087.webp",
     },
     {
       id: 11,
-      name: "Hasbro Avengers",
-      description: "Vercel Toy",
+      name:"Disney Princess",
+      description: "School Bag",
       size: "Large",
-      color: "Blue",
+      color: "Red",
     
-      price: 3324,
-      image: "https://hmadmin.hamleys.in/product/493175310/300/493175310-1.jpg",
+      price: 699,
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491635827/300/491635827-1.webp",
     },
     {
       id: 12,
@@ -127,33 +127,33 @@ const ToyProduct = () => {
     },
     {
       id: 13,
-      name: "Lego Harry Potter",
-      description: "Building Toy set",
+      name: "Hasbro Liitle Pony",
+      description: "Toy Kit",
       size: "Large",
       color: "Blue",
     
-      price: 5324,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493176621/300/493176621-1.jpeg",
+      price: 524,
+      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493174755/300/493174755-1_2992.webp",
     },
     {
       id: 14,
-      name: "Li'l Wizards Baby Shark",
-      description: "Toy set",
+      name: "Frank Mickey ",
+      description: "Puzzel Set",
       size: "Large",
-      color: "Blue",
+      color: "Red",
     
       price: 1067,
-      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/494347989/300/494347989-1_9011.webp",
+      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491602332/300/491602332-1.webp",
     },
     {
       id: 15,
-      name: "Baby Shark",
-      description: "Sound Toy",
+      name: "Smiggle Mickey mouse",
+      description: "School Bag",
       size: "Large",
       color: "Blue",
     
       price: 909,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491960527/300/491960527-1.webp",
+      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493174484/300/493174484-1_3588.webp",
     },
     // Add more toy products as needed
   ];
@@ -284,4 +284,4 @@ const ToyProduct = () => {
   );
 };
 
-export default ToyProduct;
+export default GirlsProduct;

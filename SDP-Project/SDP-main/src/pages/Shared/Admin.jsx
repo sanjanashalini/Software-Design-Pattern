@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Admin = () => {
     const navigate = useNavigate();
 
     // Function to handle navigation based on category
@@ -29,14 +29,12 @@ const Login = () => {
                     </div>
                 </div>
                 <div className='card-footer'>
-                    <button onClick={()=>handleNavigation("/shopbycategory")} className='button'>Login</button>
+                    <button onClick={()=>handleNavigation("/admin/dashboard")} className='button'>Login</button>
                 </div>
-                <div className="switchto">
-                    <button  onClick={()=>handleNavigation("/adminpage")}>Admin</button>
-                </div>
+               
             </div>
         </div>
     );
 }
 
-export default Login;
+export default Admin;
