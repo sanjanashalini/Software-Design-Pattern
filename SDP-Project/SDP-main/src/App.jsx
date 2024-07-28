@@ -19,6 +19,7 @@ import UserHome from './pages/User/UserHome'
 import GirlsProduct from './pages/User/GirlsProduct'
 import KidssProduct from './pages/User/KidsProduct'
 import Admin from './pages/Shared/Admin'
+import CartPage from './pages/User/CartPage'
 
 
 const App = () => {
@@ -38,6 +39,8 @@ const App = () => {
                         <Route path='/girls-product' element={<GirlsProduct/>} />
                         <Route path='/kidsproduct' element={<KidssProduct/>} />
                         <Route path='/adminpage' element={<Admin/>} />
+                        <Route path='/cart' element={<CartPage/>} />
+                        <Route path='/logout' element={<Admin/>} />
                         
                         <Route path='/userhome' element={<UserHome />} />
                     </Route>

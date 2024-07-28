@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./UserProduct.css"// Ensure you have the styles defined
 import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const ToyProduct = () => {
   // Unique data for products
@@ -237,7 +238,7 @@ const ToyProduct = () => {
       <nav className="navbar">
         <button onClick={()=>handleNavigation("/shopbycategory")}className="nav-button">Home</button>
         <button className="nav-button">Wishlist ❤</button>
-        <button className="nav-button">Cart 🛒</button>
+        <button onClick={()=>handleNavigation("/cart")} className="nav-button">Cart 🛒</button>
       </nav>
       <aside className="filters">
       <img src = 'https://i.pinimg.com/236x/8a/c2/30/8ac23091d84ae75dfdbba017a74826c2.jpg'></img>
@@ -276,6 +277,7 @@ const ToyProduct = () => {
               <p>Shape: {product.shape}</p>
               <p>₹{product.price}</p>
               <p>Inclusive of all taxes</p>
+              <Button className="bg-red-600 border-black">Add to Cart</Button>
             </div>
           ))}
         </div>

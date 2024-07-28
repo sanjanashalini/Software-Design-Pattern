@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./UserProduct.css"// Ensure you have the styles defined
 import { useNavigate } from "react-router-dom";
-
+import { Button } from "@/components/ui/button";
 const KidssProduct = () => {
   // Unique data for products
   const products = [
@@ -277,6 +277,7 @@ const KidssProduct = () => {
               <p>Age: {product.Age}</p>
               <p>₹{product.price}</p>
               <p>Inclusive of all taxes</p>
+              <Button className="bg-red-600 border-black">Add to cart</Button>
             </div>
           ))}
         </div>

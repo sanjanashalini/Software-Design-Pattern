@@ -2,159 +2,30 @@ import React, { useState } from "react";
 import "./UserProduct.css"// Ensure you have the styles defined
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-const GirlsProduct = () => {
+import PriceDetails from "./Price";
+const CartPage = () => {
   // Unique data for products
   const products = [
     {
-      id: 1,
-      name: "Barbie",
-      description: "Toy Kit",
-      size: "Small",
-      color: "Pink",
-     
-      price: 2404,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/490803852/300/490803852-4.webp",
-    },
-    {
-      id: 2,
-      name: "Barbie",
-      description: "Vercel bag",
-      size: "Large",
-      color: "pink",
+        id: 1,
+        name: "Frank SpiderMan",
+        description: "Floor Puzzles",
+        size: "Small",
+        color: "Multicolor",
+       
+        price: 404,
+        image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491892917/300/491892917-1.jpeg",
+      },
+      {
+        id: 5,
+        name: "Marvel Spider man",
+        description: "Vercel Toy",
+        size: "Large",
+        color: "Orange",
       
-      price: 649,
-      image: "https://hmadmin.hamleys.in/product/493663103/300/493663103-1.jpg",
-    },
-    {
-      id: 3,
-      name: "Barbie",
-      description: "Versel Toy",
-      size: "Medium",
-      color: "pink",
-     
-      price: 900,
-      image: "https://hmadmin.hamleys.in/product/493663407/300/493663407-1.jpg",
-    },
-    {
-      id: 4,
-      name: "Barbie",
-      description: "Toy Kit",
-      size: "Medium",
-      color: "pink",
-     
-      price: 3780,
-      image: "https://hmadmin.hamleys.in/product/491232286/300/491636216-2.jpg",
-    },
-    {
-      id: 5,
-      name: "Barbie",
-      description: "Vercel Toy",
-      size: "Large",
-      color: "Pink",
-    
-      price: 1500,
-      image: "https://hmadmin.hamleys.in/product/493663112/300/493663112-1.jpg",
-    },
-    {
-      id: 6,
-      name: "Barbie",
-      description: "Mermaid Doll",
-      size: "small",
-      color: "Multicolor",
-    
-      price: 1090,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493663108/300/493663108-1_8086.webp",
-    },
-    {
-      id: 7,
-      name: "Frozen",
-      description: "School Bag",
-      size: "medium",
-      color: "multicolor",
-    
-      price: 850,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491636005/300/491636005-1.webp",
-    },
-    {
-      id: 8,
-      name: "Frozen",
-      description: "Puzzel Pack",
-      size: "Large",
-      color: "Blue",
-    
-      price: 2500,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491396008/300/491396008-1.webp",
-    },
-    {
-      id: 9,
-      name: "Frozen",
-      description: "Ice Palace Kit",
-      size: "Large",
-      color: "Blue",
-    
-      price: 1800,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/492409677/300/492409677-1_7654.jpeg",
-    },
-    {
-      id: 10,
-      name: "Disney Princess",
-      description: "Horse Carriage kit",
-      size: "Large",
-      color: "Multicolor",
-    
-      price: 2475,
-      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/494348193/300/494348193-1_3087.webp",
-    },
-    {
-      id: 11,
-      name:"Disney Princess",
-      description: "School Bag",
-      size: "Large",
-      color: "Red",
-    
-      price: 699,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491635827/300/491635827-1.webp",
-    },
-    {
-      id: 12,
-      name: "Lego Harry Potter",
-      description: "Building Toy set",
-      size: "Large",
-      color: "Blue",
-    
-      price: 2324,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493176625/300/493176625-1.jpeg",
-    },
-    {
-      id: 13,
-      name: "Hasbro Liitle Pony",
-      description: "Toy Kit",
-      size: "Large",
-      color: "Blue",
-    
-      price: 524,
-      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493174755/300/493174755-1_2992.webp",
-    },
-    {
-      id: 14,
-      name: "Frank Mickey ",
-      description: "Puzzel Set",
-      size: "Large",
-      color: "Red",
-    
-      price: 1067,
-      image: "https://cdn.pixelspray.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/491602332/300/491602332-1.webp",
-    },
-    {
-      id: 15,
-      name: "Smiggle Mickey mouse",
-      description: "School Bag",
-      size: "Large",
-      color: "Blue",
-    
-      price: 909,
-      image: "https://cdn.pixelbin.io/v2/black-bread-289bfa/HrdP6X/original/hamleys-product/493174484/300/493174484-1_3588.webp",
-    },
+        price: 1500,
+        image: "https://hmadmin.hamleys.in/product/493175372/300/493175372-1.jpg",
+      },
     // Add more toy products as needed
   ];
 
@@ -246,7 +117,7 @@ const GirlsProduct = () => {
       </aside>
       <main className="products">
         <div className="product-header">
-          <h2>Toys</h2>
+          <h2>Cart</h2>
          
         </div>
         <div className="product-grid">
@@ -276,13 +147,14 @@ const GirlsProduct = () => {
               <p>Shape: {product.shape}</p>
               <p>₹{product.price}</p>
               <p>Inclusive of all taxes</p>
-              <Button className="bg-red-600 border-black">Add to cart</Button>
+              
             </div>
           ))}
         </div>
+        <PriceDetails></PriceDetails>
       </main>
     </div>
   );
 };
 
-export default GirlsProduct;
+export default CartPage;
