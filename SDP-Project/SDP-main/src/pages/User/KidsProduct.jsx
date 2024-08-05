@@ -273,7 +273,7 @@ const KidssProduct = () => {
               <p>{product.description}</p>
               <p>Size: {product.size}</p>
               <p>Color: {product.color}</p>
-              <p>Shape: {product.shape}</p>
+           
               <p>Age: {product.Age}</p>
               <p>₹{product.price}</p>
               <p>Inclusive of all taxes</p>

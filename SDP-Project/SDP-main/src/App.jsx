@@ -18,8 +18,9 @@ import ShopByCategory from './pages/User/UserLanding'
 import UserHome from './pages/User/UserHome'
 import GirlsProduct from './pages/User/GirlsProduct'
 import KidssProduct from './pages/User/KidsProduct'
-import Admin from './pages/Shared/Admin'
+
 import CartPage from './pages/User/CartPage'
+import AdminProducts from './pages/Admin/AdminProduct'
 
 
 const App = () => {
@@ -38,9 +39,9 @@ const App = () => {
                         <Route path='/toyproduct' element={<ToyProduct/>} />
                         <Route path='/girls-product' element={<GirlsProduct/>} />
                         <Route path='/kidsproduct' element={<KidssProduct/>} />
-                        <Route path='/adminpage' element={<Admin/>} />
+                       
                         <Route path='/cart' element={<CartPage/>} />
-                        <Route path='/logout' element={<Admin/>} />
+                        <Route path='/logout' element={<Login/>}/>
                         
                         <Route path='/userhome' element={<UserHome />} />
                     </Route>
@@ -48,6 +49,7 @@ const App = () => {
                     <Route element={<AdminLayout />}>
                         <Route path='/admin/dashboard' element={<AdminDashboard />} />
                         <Route path='/admin/users' element={<AdminUsers />} />
+                        <Route path='/admin/product' element={<AdminProducts />} />
                     </Route>
 
 

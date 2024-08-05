@@ -41,6 +41,7 @@ const PriceDetails = () => {
         className="coupon-input"
       />
       <button onClick={applyCoupon} className="apply-coupon-btn">Apply Coupon</button>
+      <button className='apply-coupons-btn'>BUY NOW</button>
     </div>
   );
 };

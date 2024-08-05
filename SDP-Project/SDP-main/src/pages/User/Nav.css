@@ -63,6 +63,7 @@
     border: 1px solid #ddd;
     padding: 20px;
     width: 1000px;
+    height:400px;
     margin: 0 auto;
     border-radius: 5px;
     font-family: Arial, sans-serif;
@@ -110,6 +111,14 @@
     cursor: pointer;
     width: 100px;
     margin-top: 5px;
+  }
+ .apply-coupons-btn {
+    background-color: #dd0b0b;
+   padding:5px;
+    margin-top: 16px;
+   padding-bottom: 50px;
+    text-align: center;
+  
   }
   
   .price-details .apply-coupon-btn:hover {

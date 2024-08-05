@@ -274,7 +274,7 @@ const ToyProduct = () => {
               <p>{product.description}</p>
               <p>Size: {product.size}</p>
               <p>Color: {product.color}</p>
-              <p>Shape: {product.shape}</p>
+            
               <p>₹{product.price}</p>
               <p>Inclusive of all taxes</p>
               <Button className="bg-red-600 border-black">Add to Cart</Button>
