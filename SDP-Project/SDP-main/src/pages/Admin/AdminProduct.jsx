@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Edit, Plus, TrashIcon } from "lucide-react";
+import { Plus, TrashIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -30,41 +27,21 @@ import {
 
 const AdminProducts = () => {
   const [open, setOpen] = useState(false);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([
+    { id: 1, name: 'Product 1', image: 'image1.jpg', price: 100, color: 'Red' },
+    { id: 2, name: 'Product 2', image: 'image2.jpg', price: 200, color: 'Blue' }
+  ]);
   const [newProduct, setNewProduct] = useState({ name: '', image: '', price: 0, color: '' });
 
-  useEffect(() => {
-    // Fetch products from backend
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('http://localhost:8080/users/getproduct');
-        setProducts(response.data);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    };
-
-    fetchProducts();
-  }, []);
-
-  const handleDelete = async (id) => {
-    try {
-      await axios.delete(`http://localhost:8080/users/deleteproduct/${id}`);
-      setProducts(prevProducts => prevProducts.filter(product => product.id !== id));
-    } catch (error) {
-      console.error('Error deleting product:', error);
-    }
+  const handleDelete = (id) => {
+    setProducts(prevProducts => prevProducts.filter(product => product.id !== id));
   };
 
-  const handleAddProduct = async () => {
-    try {
-      const response = await axios.post('http://localhost:8080/users/addproduct', newProduct);
-      setProducts(prevProducts => [...prevProducts, response.data]);
-      setNewProduct({ name: '', image: '', price: 0, color: '' });
-      setOpen(false);
-    } catch (error) {
-      console.error('Error adding product:', error);
-    }
+  const handleAddProduct = () => {
+    const newProductWithId = { ...newProduct, id: products.length + 1 };
+    setProducts(prevProducts => [...prevProducts, newProductWithId]);
+    setNewProduct({ name: '', image: '', price: 0, color: '' });
+    setOpen(false);
   };
 
   const handleChange = (e) => {
@@ -102,7 +79,7 @@ const AdminProducts = () => {
                   <TableCell>{product.color}</TableCell>
                   <TableCell>
                     <span className='w-full h-full flex justify-center items-center gap-3'>
-                        <TrashIcon 
+                      <TrashIcon 
                         className='h-8 w-8 p-1 text-red-500 cursor-pointer hover:bg-red-500 hover:text-background rounded-md'
                         onClick={() => handleDelete(product.id)}
                       />

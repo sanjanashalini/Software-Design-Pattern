@@ -18,9 +18,11 @@ import ShopByCategory from './pages/User/UserLanding'
 import UserHome from './pages/User/UserHome'
 import GirlsProduct from './pages/User/GirlsProduct'
 import KidssProduct from './pages/User/KidsProduct'
-
+import './pages/User/PaymentDetails.css'
 import CartPage from './pages/User/CartPage'
 import AdminProducts from './pages/Admin/AdminProduct'
+import PaymentDetails from './pages/User/PaymentDetails'
+import OrderPlaced from './pages/User/OrderPlaced'
 
 
 const App = () => {
@@ -39,9 +41,10 @@ const App = () => {
                         <Route path='/toyproduct' element={<ToyProduct/>} />
                         <Route path='/girls-product' element={<GirlsProduct/>} />
                         <Route path='/kidsproduct' element={<KidssProduct/>} />
-                       
+                        <Route path="/order-placed" element={<OrderPlaced />} />
                         <Route path='/cart' element={<CartPage/>} />
                         <Route path='/logout' element={<Login/>}/>
+                        <Route path='/payment' element={<PaymentDetails/>}/>
                         
                         <Route path='/userhome' element={<UserHome />} />
                     </Route>
